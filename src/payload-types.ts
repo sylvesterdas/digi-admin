@@ -72,6 +72,8 @@ export interface Config {
     media: Media;
     categories: Category;
     users: User;
+    situations: Situation;
+    'funding-programs': FundingProgram;
     redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -89,6 +91,8 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
+    situations: SituationsSelect<false> | SituationsSelect<true>;
+    'funding-programs': FundingProgramsSelect<false> | FundingProgramsSelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -747,6 +751,73 @@ export interface Form {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "situations".
+ */
+export interface Situation {
+  id: number;
+  title: string;
+  description?: string | null;
+  /**
+   * Lucide icon name (e.g., Baby, Briefcase, Building2)
+   */
+  icon: string;
+  category: 'life' | 'business' | 'authority';
+  /**
+   * Display order (lower numbers appear first)
+   */
+  order?: number | null;
+  /**
+   * Optional external link or slug
+   */
+  link?: string | null;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "funding-programs".
+ */
+export interface FundingProgram {
+  id: number;
+  title: string;
+  description: string;
+  targetGroup: 'citizen' | 'company' | 'employees' | 'authority';
+  subjectArea: (
+    | 'birth'
+    | 'childcare'
+    | 'school'
+    | 'youth'
+    | 'work'
+    | 'health'
+    | 'living'
+    | 'building'
+    | 'retirement'
+  )[];
+  topic?: string | null;
+  /**
+   * Funding amount or range
+   */
+  amount?: string | null;
+  deadline?: string | null;
+  /**
+   * External application link
+   */
+  link: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -954,6 +1025,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: number | User;
+      } | null)
+    | ({
+        relationTo: 'situations';
+        value: number | Situation;
+      } | null)
+    | ({
+        relationTo: 'funding-programs';
+        value: number | FundingProgram;
       } | null)
     | ({
         relationTo: 'redirects';
@@ -1322,6 +1401,40 @@ export interface UsersSelect<T extends boolean = true> {
         createdAt?: T;
         expiresAt?: T;
       };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "situations_select".
+ */
+export interface SituationsSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  icon?: T;
+  category?: T;
+  order?: T;
+  link?: T;
+  generateSlug?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "funding-programs_select".
+ */
+export interface FundingProgramsSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  targetGroup?: T;
+  subjectArea?: T;
+  topic?: T;
+  amount?: T;
+  deadline?: T;
+  link?: T;
+  generateSlug?: T;
+  slug?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
