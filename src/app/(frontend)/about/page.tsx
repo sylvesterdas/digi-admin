@@ -3,8 +3,8 @@ import { Metadata } from 'next/types'
 import { Building2, Users, Lock, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About BayernPortal | BayernPortal',
-  description: 'Learn about the BayernPortal digital administration platform',
+  title: 'About | Government Services Portal',
+  description: 'Learn about the digital government services platform',
 }
 
 export default function AboutPage() {
@@ -14,9 +14,9 @@ export default function AboutPage() {
       <section className="bg-primary text-white py-16 mb-12">
         <div className="container">
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold mb-4">About BayernPortal</h1>
+            <h1 className="text-4xl font-bold mb-4">About Us</h1>
             <p className="text-xl text-white/90">
-              Your central access point to digital government services in Bavaria
+              Your central access point to digital government services
             </p>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function AboutPage() {
         {/* Introduction */}
         <div className="prose dark:prose-invert max-w-none mb-16">
           <p className="text-lg">
-            BayernPortal is the central digital platform for government services in Bavaria.
+            This is the central digital platform for government services.
             It provides citizens, businesses, and authorities with easy access to administrative
             services, information, and procedures.
           </p>
@@ -84,7 +84,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
             We are committed to making government services accessible, efficient, and user-friendly
-            for everyone in Bavaria. Through digital transformation, we aim to:
+            for everyone. Through digital transformation, we aim to:
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
             <li>Simplify access to government services</li>
