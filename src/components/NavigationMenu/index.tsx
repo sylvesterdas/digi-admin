@@ -136,7 +136,7 @@ export const NavigationMenu: React.FC = () => {
           aria-label="Navigation menu"
           className="fixed top-0 left-0 h-full w-80 bg-white dark:bg-gray-900 z-50 shadow-2xl transform transition-transform duration-300 ease-in-out translate-x-0"
         >
-        <div className="flex flex-col h-full">
+          <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Navigation</h2>
