@@ -33,7 +33,39 @@ const getPagesSitemap = unstable_cache(
 
     const defaultSitemap = [
       {
+        loc: `${SITE_URL}/`,
+        lastmod: dateFallback,
+      },
+      {
         loc: `${SITE_URL}/search`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/about`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/help`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/funding`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/services/popular`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/situations/life`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/situations/business`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/situations/authority`,
         lastmod: dateFallback,
       },
       {
