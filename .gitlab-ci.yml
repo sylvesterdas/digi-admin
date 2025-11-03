@@ -1,2 +1,5 @@
 # GitLab CI/CD is disabled
 # This file intentionally left blank to prevent automated pipelines
+test:
+    script:
+        - echo "Test OK"
