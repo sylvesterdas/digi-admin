@@ -1,12 +1,64 @@
-# Payload Website Template
+# Government Services Portal
 
-This is the official [Payload Website Template](https://github.com/payloadcms/payload/blob/main/templates/website). Use it to power websites, blogs, or portfolios from small to enterprise. This repo includes a fully-working backend, enterprise-grade admin panel, and a beautifully designed, production-ready website.
+A comprehensive digital government services portal built with Payload CMS and Next.js. This platform provides citizens, businesses, and authorities with easy access to government services, information, and procedures through an intuitive, accessible interface.
 
-This template is right for you if you are working on:
+This portal is designed for:
 
-- A personal or enterprise-grade website, blog, or portfolio
-- A content publishing platform with a fully featured publication workflow
-- Exploring the capabilities of Payload
+- Government agencies looking to digitize their services
+- Organizations needing a centralized platform for public service delivery
+- Projects requiring a content management system with role-based access control
+- Platforms that need to organize services by life situations and categories
+
+## Screenshots
+
+### Homepage
+The portal features a clean, professional homepage with a prominent search function and category-based navigation for citizens, businesses, and authorities.
+
+![Homepage](https://raw.githubusercontent.com/user-attachments/assets/homepage.png)
+
+**Key Features:**
+- Hero section with search bar
+- Category buttons (For citizens, For businesses, For authorities)
+- Life situations section with card-based layout
+- Professional blue color scheme (#0078A0)
+
+### About Page
+Information about the government services portal, designed with accessibility and clarity in mind.
+
+![About Page](https://raw.githubusercontent.com/user-attachments/assets/about.png)
+
+**Features:**
+- Clean layout with feature cards
+- "For Everyone" and "Secure & Trustworthy" messaging
+- Responsive design
+
+### Funding Programs
+Browse and discover funding opportunities organized by category.
+
+![Funding Programs](https://raw.githubusercontent.com/user-attachments/assets/funding.png)
+
+**Features:**
+- Category-based organization (Business Funding, Social Projects, Infrastructure, Innovation)
+- Icon-based navigation
+- Program count display
+- Card-based layout for easy browsing
+
+### Help & Support
+Comprehensive support options for users with multiple contact methods.
+
+![Help & Support](https://raw.githubusercontent.com/user-attachments/assets/help.png)
+
+**Features:**
+- Multiple support channels (Phone, Email, Live Chat)
+- Operating hours display
+- Frequently Asked Questions section
+- Accessible design with clear visual hierarchy
+
+### Additional Features
+- **Accessible Navigation Menu**: Fully keyboard-navigable drawer menu with ARIA support, focus trap, and Escape key handling
+- **Professional Footer**: 4-column layout with About, Quick Links, Information, and Contact sections
+- **SEO-Optimized**: Automatic sitemap generation at `/pages-sitemap.xml` and `/posts-sitemap.xml`
+- **Responsive Design**: Mobile-first approach ensuring great experience on all devices
 
 Core features:
 
@@ -68,6 +120,24 @@ The Payload config is tailored specifically to the needs of most websites. It is
 
 See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for details on how to extend this functionality.
 
+- #### Situations
+
+  The core of the portal's service organization. Situations categorize government services by life events, business scenarios, or authority needs. Each situation includes:
+  - **Type**: Life, Business, or Authority category
+  - **Icon selection**: Visual identification using Lucide icons
+  - **Description**: Clear explanation of the situation
+  - **Slug**: SEO-friendly URL generation
+  - Dynamic card-based display on category pages
+
+- #### Funding Programs
+
+  Organize and display funding opportunities for citizens and businesses. Features include:
+  - **Category-based organization**: Business Funding, Social Projects, Infrastructure, Innovation
+  - **Program details**: Title, description, eligibility criteria
+  - **Application information**: Links and requirements
+  - **Icon-based navigation**: Visual categorization
+  - Program count display per category
+
 - #### Users (Authentication)
 
   Users are auth-enabled collections that have access to the admin panel and unpublished content. See [Access Control](#access-control) for more details.
@@ -76,7 +146,7 @@ See the [Collections](https://payloadcms.com/docs/configuration/collections) doc
 
 - #### Posts
 
-  Posts are used to generate blog posts, news articles, or any other type of content that is published over time. All posts are layout builder enabled so you can generate unique layouts for each post using layout-building blocks, see [Layout Builder](#layout-builder) for more details. Posts are also draft-enabled so you can preview them before publishing them to your website, see [Draft Preview](#draft-preview) for more details.
+  Posts are used to generate news articles, announcements, or any other type of content that is published over time. All posts are layout builder enabled so you can generate unique layouts for each post using layout-building blocks, see [Layout Builder](#layout-builder) for more details. Posts are also draft-enabled so you can preview them before publishing them to your website, see [Draft Preview](#draft-preview) for more details.
 
 - #### Pages
 
@@ -84,11 +154,11 @@ See the [Collections](https://payloadcms.com/docs/configuration/collections) doc
 
 - #### Media
 
-  This is the uploads enabled collection used by pages, posts, and projects to contain media like images, videos, downloads, and other assets. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
+  This is the uploads enabled collection used by pages, posts, situations, and funding programs to contain media like images, videos, downloads, and other assets. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
 
 - #### Categories
 
-  A taxonomy used to group posts together. Categories can be nested inside of one another, for example "News > Technology". See the official [Payload Nested Docs Plugin](https://payloadcms.com/docs/plugins/nested-docs) for more details.
+  A taxonomy used to group posts together. Categories can be nested inside of one another, for example "News > Announcements". See the official [Payload Nested Docs Plugin](https://payloadcms.com/docs/plugins/nested-docs) for more details.
 
 ### Globals
 
@@ -166,7 +236,7 @@ We have configured [Scheduled Publish](https://payloadcms.com/docs/versions/draf
 
 ## Website
 
-This template includes a beautifully designed, production-ready front-end built with the [Next.js App Router](https://nextjs.org), served right alongside your Payload app in a instance. This makes it so that you can deploy both your backend and website where you need it.
+This portal includes a beautifully designed, production-ready front-end built with the [Next.js App Router](https://nextjs.org), served right alongside your Payload app. This makes it possible to deploy both your backend CMS and public-facing portal together.
 
 Core features:
 
@@ -176,14 +246,23 @@ Core features:
 - [Payload Admin Bar](https://github.com/payloadcms/payload/tree/main/packages/admin-bar)
 - [TailwindCSS styling](https://tailwindcss.com/)
 - [shadcn/ui components](https://ui.shadcn.com/)
+- [Lucide React icons](https://lucide.dev/)
+- **Government Portal Features:**
+  - Situation-based service organization (Life, Business, Authority)
+  - Funding Programs browsing and discovery
+  - Accessible navigation with keyboard support and ARIA attributes
+  - Professional blue color scheme (#0078A0)
+  - Hero search functionality
+  - Category-based navigation
+  - Multi-channel support (Phone, Email, Live Chat)
 - User Accounts and Authentication
-- Fully featured blog
+- Fully featured blog/news system
 - Publication workflow
-- Dark mode
+- Dark mode support
 - Pre-made layout building blocks
-- SEO
-- Search
-- Redirects
+- SEO optimization with automatic sitemaps
+- Search functionality
+- Redirects management
 - Live preview
 
 ### Cache
