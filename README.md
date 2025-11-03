@@ -9,49 +9,41 @@ This portal is designed for:
 - Projects requiring a content management system with role-based access control
 - Platforms that need to organize services by life situations and categories
 
-## Screenshots
+## Portal Features
 
 ### Homepage
-The portal features a clean, professional homepage with a prominent search function and category-based navigation for citizens, businesses, and authorities.
-
-![Homepage](https://raw.githubusercontent.com/user-attachments/assets/homepage.png)
+The portal features a clean, professional homepage with a prominent search function and category-based navigation.
 
 **Key Features:**
-- Hero section with search bar
+- Hero section with "Government Services Portal" branding and search bar
 - Category buttons (For citizens, For businesses, For authorities)
 - Life situations section with card-based layout
 - Professional blue color scheme (#0078A0)
 
-### About Page
+### About Page (`/about`)
 Information about the government services portal, designed with accessibility and clarity in mind.
-
-![About Page](https://raw.githubusercontent.com/user-attachments/assets/about.png)
 
 **Features:**
 - Clean layout with feature cards
-- "For Everyone" and "Secure & Trustworthy" messaging
-- Responsive design
+- "For Everyone" and "Secure & Trustworthy" messaging sections
+- Responsive design with icons
 
-### Funding Programs
+### Funding Programs (`/funding`)
 Browse and discover funding opportunities organized by category.
-
-![Funding Programs](https://raw.githubusercontent.com/user-attachments/assets/funding.png)
 
 **Features:**
 - Category-based organization (Business Funding, Social Projects, Infrastructure, Innovation)
-- Icon-based navigation
-- Program count display
+- Icon-based navigation with Lucide icons
+- Program count display per category
 - Card-based layout for easy browsing
 
-### Help & Support
+### Help & Support (`/help`)
 Comprehensive support options for users with multiple contact methods.
-
-![Help & Support](https://raw.githubusercontent.com/user-attachments/assets/help.png)
 
 **Features:**
 - Multiple support channels (Phone, Email, Live Chat)
-- Operating hours display
-- Frequently Asked Questions section
+- Operating hours display for each channel
+- Frequently Asked Questions section with expandable answers
 - Accessible design with clear visual hierarchy
 
 ### Additional Features
@@ -59,6 +51,8 @@ Comprehensive support options for users with multiple contact methods.
 - **Professional Footer**: 4-column layout with About, Quick Links, Information, and Contact sections
 - **SEO-Optimized**: Automatic sitemap generation at `/pages-sitemap.xml` and `/posts-sitemap.xml`
 - **Responsive Design**: Mobile-first approach ensuring great experience on all devices
+- **Category Pages**: Dynamic situation browsing at `/situations/life`, `/situations/business`, and `/situations/authority`
+- **Popular Services**: Featured services page at `/services/popular`
 
 Core features:
 
