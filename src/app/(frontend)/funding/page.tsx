@@ -4,7 +4,7 @@ import { DollarSign, Users, Building2, Lightbulb } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Funding Programs | BayernPortal',
+  title: 'Funding Programs | Government Services Portal',
   description: 'Find funding opportunities for your projects and initiatives',
 }
 

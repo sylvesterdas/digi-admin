@@ -25,7 +25,7 @@ export default async function HomePage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-6 text-center">
             <h1 className="text-4xl font-bold md:text-5xl">
-              BayernPortal - Digital administration
+              Government Services Portal
             </h1>
             <HeroSearch />
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -122,6 +122,6 @@ export default async function HomePage() {
 }
 
 export const metadata = {
-  title: 'BayernPortal - Digital Administration for Bavaria',
+  title: 'Government Services Portal',
   description: 'Access government services, procedures and information for citizens, businesses and authorities.',
 }

@@ -3,8 +3,8 @@ import { Metadata } from 'next/types'
 import { Phone, Mail, MessageCircle, BookOpen, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Help & Support | BayernPortal',
-  description: 'Get help and support for using BayernPortal services',
+  title: 'Help & Support | Government Services Portal',
+  description: 'Get help and support for using government services',
 }
 
 export default function HelpPage() {
@@ -39,8 +39,8 @@ export default function HelpPage() {
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
               Response within 24 hours
             </p>
-            <a href="mailto:support@bayernportal.de" className="text-primary hover:underline">
-              support@bayernportal.de
+            <a href="mailto:support@example.gov" className="text-primary hover:underline">
+              support@example.gov
             </a>
           </div>
 

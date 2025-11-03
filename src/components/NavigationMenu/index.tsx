@@ -97,7 +97,7 @@ export const NavigationMenu: React.FC = () => {
       title: 'Information',
       icon: <Info className="w-5 h-5" />,
       items: [
-        { label: 'About BayernPortal', href: '/about' },
+        { label: 'About', href: '/about' },
         { label: 'Help & Support', href: '/help' },
       ],
     },

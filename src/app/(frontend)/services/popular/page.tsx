@@ -4,7 +4,7 @@ import { Star, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Popular Services | BayernPortal',
+  title: 'Popular Services | Government Services Portal',
   description: 'Most frequently used services and procedures',
 }
 
