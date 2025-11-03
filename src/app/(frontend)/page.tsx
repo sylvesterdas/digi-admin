@@ -2,7 +2,7 @@ import React from 'react'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { SituationCard } from '@/components/SituationCard'
-import { Search } from 'lucide-react'
+import { HeroSearch } from '@/components/HeroSearch'
 import Link from 'next/link'
 
 export default async function HomePage() {
@@ -27,18 +27,7 @@ export default async function HomePage() {
             <h1 className="text-4xl font-bold md:text-5xl">
               BayernPortal - Digital administration
             </h1>
-            <div className="w-full max-w-2xl">
-              <div className="relative flex items-center">
-                <input
-                  type="text"
-                  placeholder="What are you looking for?"
-                  className="w-full rounded-lg border-0 px-4 py-3 pr-12 text-foreground shadow-lg focus:ring-2 focus:ring-white"
-                />
-                <button className="absolute right-3 top-1/2 -translate-y-1/2 text-primary hover:text-primary/80">
-                  <Search className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
+            <HeroSearch />
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <Link
                 href="/situations/life"
