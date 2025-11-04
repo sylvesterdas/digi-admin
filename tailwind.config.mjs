@@ -92,10 +92,35 @@ const config = {
         success: 'hsl(var(--success))',
         error: 'hsl(var(--error))',
         warning: 'hsl(var(--warning))',
+        midnight: {
+          DEFAULT: 'var(--midnight)',
+          80: 'var(--midnight-80)',
+          60: 'var(--midnight-60)',
+          40: 'var(--midnight-40)',
+          30: 'var(--midnight-30)',
+          12: 'var(--midnight-12)',
+          8: 'var(--midnight-8)',
+        },
+        lagoon: {
+          DEFAULT: 'var(--lagoon)',
+          dark: 'var(--dark-lagoon)',
+        },
+        brand: {
+          DEFAULT: 'var(--brand-060)',
+        },
+        basil: {
+          DEFAULT: 'var(--basil-highlight)',
+          light: 'var(--basil-light)',
+          superlight: 'var(--basil-superlight)',
+        },
+        amarillo: {
+          DEFAULT: 'var(--amarillo)',
+          highlight: 'var(--amarillo-highlight)',
+          dark: 'var(--amarillo-dark)',
+        },
       },
       fontFamily: {
-        mono: ['var(--font-geist-mono)'],
-        sans: ['var(--font-geist-sans)'],
+        sans: ['var(--font-dm-sans)', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
