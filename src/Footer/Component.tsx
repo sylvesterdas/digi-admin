@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Building2, Mail, Phone, MapPin } from 'lucide-react'
+import { Logo } from '@/components/Logo/Logo'
 
 export async function Footer() {
   return (
@@ -9,7 +10,9 @@ export async function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Government Services</h3>
+            <div className="mb-4">
+              <Logo className="[&_span]:text-white [&_div]:border-white" />
+            </div>
             <p className="text-white/70 text-sm">
               Your central platform for accessing government services, procedures, and information.
             </p>
