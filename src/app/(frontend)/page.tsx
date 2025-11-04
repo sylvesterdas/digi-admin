@@ -58,7 +58,7 @@ export default async function HomePage() {
             <h2 className="text-2xl font-bold text-foreground">Life situations</h2>
             <Link
               href="/situations/life"
-              className="text-sm font-medium text-primary hover:underline"
+              className="text-sm font-medium text-link hover:text-link-hover hover:underline"
             >
               Show all life situations →
             </Link>
@@ -97,7 +97,7 @@ export default async function HomePage() {
           <h2 className="mb-6 text-2xl font-bold text-foreground">Most popular</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-lg border border-primary/20 bg-white p-6 shadow-sm">
-              <div className="mb-2 text-sm font-medium text-primary">Procedure</div>
+              <div className="mb-2 text-sm font-medium text-link">Procedure</div>
               <h3 className="mb-2 text-lg font-semibold">
                 Certificate of good conduct: application for a simple certificate of good conduct
               </h3>
@@ -106,7 +106,7 @@ export default async function HomePage() {
               </p>
             </div>
             <div className="rounded-lg border border-primary/20 bg-white p-6 shadow-sm">
-              <div className="mb-2 text-sm font-medium text-primary">Procedure</div>
+              <div className="mb-2 text-sm font-medium text-link">Procedure</div>
               <h3 className="mb-2 text-lg font-semibold">
                 Motor vehicle: application for new registration
               </h3>

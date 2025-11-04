@@ -67,17 +67,17 @@ export default function FundingPage() {
                 className="p-6 border-2 border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary hover:shadow-lg transition-all group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 text-primary rounded-lg group-hover:bg-primary group-hover:text-white transition-colors">
+                  <div className="p-3 bg-link/10 text-link rounded-lg group-hover:bg-link group-hover:text-white transition-colors">
                     {category.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-semibold mb-2 group-hover:text-link transition-colors">
                       {category.title}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-3">
                       {category.description}
                     </p>
-                    <span className="text-sm text-primary font-medium">
+                    <span className="text-sm text-link font-medium">
                       {category.count} programs available
                     </span>
                   </div>

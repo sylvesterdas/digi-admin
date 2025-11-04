@@ -19,53 +19,53 @@ export default function HelpPage() {
         {/* Contact Options */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
-            <div className="p-4 bg-primary/10 text-primary rounded-full w-fit mx-auto mb-4">
+            <div className="p-4 bg-link/10 text-link rounded-full w-fit mx-auto mb-4">
               <Phone className="w-6 h-6" />
             </div>
             <h3 className="font-semibold mb-2">Phone Support</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
               Mon-Fri: 8:00 - 18:00
             </p>
-            <a href="tel:+4989123456789" className="text-primary hover:underline">
+            <a href="tel:+4989123456789" className="text-link hover:text-link-hover hover:underline">
               089 / 1234-5678
             </a>
           </div>
 
           <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
-            <div className="p-4 bg-primary/10 text-primary rounded-full w-fit mx-auto mb-4">
+            <div className="p-4 bg-link/10 text-link rounded-full w-fit mx-auto mb-4">
               <Mail className="w-6 h-6" />
             </div>
             <h3 className="font-semibold mb-2">Email Support</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
               Response within 24 hours
             </p>
-            <a href="mailto:support@example.gov" className="text-primary hover:underline">
+            <a href="mailto:support@example.gov" className="text-link hover:text-link-hover hover:underline">
               support@example.gov
             </a>
           </div>
 
           <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg text-center">
-            <div className="p-4 bg-primary/10 text-primary rounded-full w-fit mx-auto mb-4">
+            <div className="p-4 bg-link/10 text-link rounded-full w-fit mx-auto mb-4">
               <MessageCircle className="w-6 h-6" />
             </div>
             <h3 className="font-semibold mb-2">Live Chat</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
               Mon-Fri: 9:00 - 17:00
             </p>
-            <button className="text-primary hover:underline">Start Chat</button>
+            <button className="text-link hover:text-link-hover hover:underline">Start Chat</button>
           </div>
         </div>
 
         {/* FAQ */}
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <HelpCircle className="w-6 h-6 text-primary" />
+            <HelpCircle className="w-6 h-6 text-link" />
             <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
           </div>
 
           <div className="space-y-4">
             <details className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-              <summary className="font-semibold cursor-pointer hover:text-primary">
+              <summary className="font-semibold cursor-pointer hover:text-link-hover">
                 How do I register for an account?
               </summary>
               <p className="mt-3 text-gray-600 dark:text-gray-400">
@@ -75,7 +75,7 @@ export default function HelpPage() {
             </details>
 
             <details className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-              <summary className="font-semibold cursor-pointer hover:text-primary">
+              <summary className="font-semibold cursor-pointer hover:text-link-hover">
                 Which documents do I need for online services?
               </summary>
               <p className="mt-3 text-gray-600 dark:text-gray-400">
@@ -85,7 +85,7 @@ export default function HelpPage() {
             </details>
 
             <details className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-              <summary className="font-semibold cursor-pointer hover:text-primary">
+              <summary className="font-semibold cursor-pointer hover:text-link-hover">
                 How long does it take to process my application?
               </summary>
               <p className="mt-3 text-gray-600 dark:text-gray-400">
@@ -95,7 +95,7 @@ export default function HelpPage() {
             </details>
 
             <details className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-              <summary className="font-semibold cursor-pointer hover:text-primary">
+              <summary className="font-semibold cursor-pointer hover:text-link-hover">
                 Is my data secure?
               </summary>
               <p className="mt-3 text-gray-600 dark:text-gray-400">
@@ -105,7 +105,7 @@ export default function HelpPage() {
             </details>
 
             <details className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-              <summary className="font-semibold cursor-pointer hover:text-primary">
+              <summary className="font-semibold cursor-pointer hover:text-link-hover">
                 Can I track my application status?
               </summary>
               <p className="mt-3 text-gray-600 dark:text-gray-400">
@@ -117,23 +117,23 @@ export default function HelpPage() {
         </div>
 
         {/* Resources */}
-        <div className="mt-12 p-6 bg-primary/5 rounded-lg">
+        <div className="mt-12 p-6 bg-link/5 rounded-lg">
           <div className="flex items-center gap-3 mb-4">
-            <BookOpen className="w-6 h-6 text-primary" />
+            <BookOpen className="w-6 h-6 text-link" />
             <h2 className="text-xl font-bold">Additional Resources</h2>
           </div>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="text-primary hover:underline">User Guide (PDF)</a>
+              <a href="#" className="text-link hover:text-link-hover hover:underline">User Guide (PDF)</a>
             </li>
             <li>
-              <a href="#" className="text-primary hover:underline">Video Tutorials</a>
+              <a href="#" className="text-link hover:text-link-hover hover:underline">Video Tutorials</a>
             </li>
             <li>
-              <a href="#" className="text-primary hover:underline">Service Directory</a>
+              <a href="#" className="text-link hover:text-link-hover hover:underline">Service Directory</a>
             </li>
             <li>
-              <a href="#" className="text-primary hover:underline">Accessibility Information</a>
+              <a href="#" className="text-link hover:text-link-hover hover:underline">Accessibility Information</a>
             </li>
           </ul>
         </div>

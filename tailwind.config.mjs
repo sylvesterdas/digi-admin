@@ -92,6 +92,10 @@ const config = {
         success: 'hsl(var(--success))',
         error: 'hsl(var(--error))',
         warning: 'hsl(var(--warning))',
+        link: {
+          DEFAULT: 'hsl(var(--link))',
+          hover: 'hsl(var(--link-hover))',
+        },
         midnight: {
           DEFAULT: 'var(--midnight)',
           80: 'var(--midnight-80)',
