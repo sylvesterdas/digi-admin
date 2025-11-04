@@ -12,12 +12,12 @@ export const Logo = (props: Props) => {
 
   return (
     <div className={clsx('flex items-center gap-2', className)}>
-      <div className="flex items-center justify-center w-8 h-8 bg-midnight rounded">
-        <span className="text-white font-bold text-lg">K</span>
+      <div className="flex items-center justify-center w-9 h-9 bg-midnight rounded">
+        <span className="text-white font-bold text-sm">K</span>
       </div>
-      <div className="flex flex-col leading-tight">
-        <span className="text-midnight dark:text-white font-normal text-base">Komm.ONE</span>
-        <span className="text-midnight dark:text-white font-bold text-base">Services Portal</span>
+      <div className="flex flex-col gap-0 leading-none">
+        <span className="text-midnight dark:text-white font-normal text-base leading-tight">Komm.ONE</span>
+        <span className="text-midnight dark:text-white font-bold text-base leading-tight">Services Portal</span>
       </div>
     </div>
   )
