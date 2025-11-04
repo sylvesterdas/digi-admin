@@ -1,0 +1,136 @@
+start.Komm.ONE + Styleguide
+Styleguide
+81.7%
+
+Sign in
+:root {
+
+/* Colors: */
+--alert-12-: #DE34001F;
+--warning-12-: #F0AF001F;
+--success-12-: #00965E1F;
+--info: #D7F7F5;
+--dark-amarillo-rgb: #F0AF00;
+--amarillo-highlight-rgb: #E89600;
+--amarillo-dark-rgb: #DE7A00;
+--basil-hightlight-rgb: #00965E;
+--basil-light-rgb: #00BA73;
+--basil-superlight-rgb: #B3EAD5;
+--brand-060: #6DD1CB;
+--lagoon-rgb: #00B2A9;
+--dark-lagoon-new-rgb: #008481;
+--spec-darkblue: #0067BE;
+--sky-dark-rgb: #0079BD;
+--sky-highlight-rgb: #0094DE;
+--sky-light-rgb: #0CA9F7;
+--midnight-rgb: #003A40;
+--midnight-80-: #003A40CC;
+--midnight-60-: #003A4099;
+--midnight-40-: #003A4066;
+--midnight-30-: #003A404D;
+--midnight-12-: #003A401F;
+--midnight-8-: #003A4014;
+--white: #FFFFFF;
+--light-grey: #F5F5F5;
+--black-3-: #00000008;
+--black-9-: #00000017;
+--black-40-: #00000066;
+--new-red-rgb: #DE3400;
+--unnamed-color-00122b: #00122B;
+
+/* Font/text values */
+--unnamed-font-family-dm-sans: DM Sans;
+--unnamed-font-family-font-awesome-6-pro: Font Awesome 6 Pro;
+--unnamed-font-style-normal: normal;
+--unnamed-font-weight-normal: normal;
+--unnamed-font-weight-bold: bold;
+--unnamed-font-size-14: 14px;
+--unnamed-font-size-16: 16px;
+--unnamed-font-size-18: 18px;
+--unnamed-font-size-20: 20px;
+--unnamed-font-size-24: 24px;
+--unnamed-font-size-27: 27px;
+--unnamed-character-spacing-0: 0px;
+--unnamed-character-spacing-0-4: 0.4px;
+--unnamed-character-spacing-0-54: 0.54px;
+--unnamed-line-spacing-19: 19px;
+--unnamed-line-spacing-21: 21px;
+--unnamed-line-spacing-25: 25px;
+--unnamed-line-spacing-30: 30px;
+--unnamed-line-spacing-34: 34px;
+--unnamed-line-spacing-41: 41px;
+}
+
+/* Character Styles */
+.unnamed-character-style-1 {
+font-family: var(--unnamed-font-family-font-awesome-6-pro);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-27);
+line-height: var(--unnamed-line-spacing-41);
+letter-spacing: var(--unnamed-character-spacing-0-54);
+color: var(--unnamed-color-00122b);
+}
+.unnamed-character-style-2 {
+font-family: var(--unnamed-font-family-font-awesome-6-pro);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-20);
+line-height: var(--unnamed-line-spacing-34);
+letter-spacing: var(--unnamed-character-spacing-0-4);
+color: var(--unnamed-color-00122b);
+}
+.body-s {
+font-family: var(--unnamed-font-family-dm-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-14);
+line-height: var(--unnamed-line-spacing-19);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--midnight-rgb);
+}
+.body-m {
+font-family: var(--unnamed-font-family-dm-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-16);
+line-height: var(--unnamed-line-spacing-21);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--midnight-rgb);
+}
+.body-l {
+font-family: var(--unnamed-font-family-dm-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-normal);
+font-size: var(--unnamed-font-size-18);
+line-height: var(--unnamed-line-spacing-25);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--midnight-rgb);
+}
+.headline-s {
+font-family: var(--unnamed-font-family-dm-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-16);
+line-height: var(--unnamed-line-spacing-19);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--midnight-rgb);
+}
+.headline-m {
+font-family: var(--unnamed-font-family-dm-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-20);
+line-height: var(--unnamed-line-spacing-25);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--midnight-rgb);
+}
+.headline-l {
+font-family: var(--unnamed-font-family-dm-sans);
+font-style: var(--unnamed-font-style-normal);
+font-weight: var(--unnamed-font-weight-bold);
+font-size: var(--unnamed-font-size-24);
+line-height: var(--unnamed-line-spacing-30);
+letter-spacing: var(--unnamed-character-spacing-0);
+color: var(--midnight-rgb);
+}
