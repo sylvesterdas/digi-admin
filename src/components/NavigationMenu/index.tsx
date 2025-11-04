@@ -109,7 +109,7 @@ export const NavigationMenu: React.FC = () => {
       <button
         ref={menuButtonRef}
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 text-primary hover:bg-primary/10 rounded-lg transition-colors"
+        className="flex items-center gap-2 px-4 py-2 text-midnight dark:text-white hover:bg-link/10 rounded-lg transition-colors"
         aria-label="Open menu"
         aria-expanded={isOpen}
         aria-controls="navigation-drawer"
@@ -158,7 +158,7 @@ export const NavigationMenu: React.FC = () => {
               onClick={() => setIsOpen(false)}
               className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border-b border-gray-100 dark:border-gray-800"
             >
-              <Home className="w-5 h-5 text-primary" />
+              <Home className="w-5 h-5 text-link" />
               <span className="font-medium">Home</span>
             </Link>
 
@@ -167,7 +167,7 @@ export const NavigationMenu: React.FC = () => {
               <div key={idx} className="border-b border-gray-100 dark:border-gray-800">
                 <div className="px-4 py-3 bg-gray-50 dark:bg-gray-800/50">
                   <div className="flex items-center gap-3">
-                    <span className="text-primary">{section.icon}</span>
+                    <span className="text-link">{section.icon}</span>
                     <h3 className="font-semibold text-gray-900 dark:text-white">
                       {section.title}
                     </h3>
@@ -182,7 +182,7 @@ export const NavigationMenu: React.FC = () => {
                         className="flex items-center justify-between px-4 py-3 pl-12 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group"
                       >
                         <span className="text-gray-700 dark:text-gray-300">{item.label}</span>
-                        <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-primary transition-colors" />
+                        <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-link transition-colors" />
                       </Link>
                     </li>
                   ))}

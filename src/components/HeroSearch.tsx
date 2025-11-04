@@ -27,7 +27,7 @@ export const HeroSearch: React.FC = () => {
         />
         <button
           type="submit"
-          className="absolute right-3 top-1/2 -translate-y-1/2 text-primary hover:text-primary/80"
+          className="absolute right-3 top-1/2 -translate-y-1/2 text-link hover:text-link-hover"
           aria-label="Search"
         >
           <Search className="h-5 w-5" />

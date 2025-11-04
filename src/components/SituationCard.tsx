@@ -24,12 +24,12 @@ export function SituationCard({ title, icon, href = '#', description }: Situatio
       )}
     >
       <div className="flex items-center gap-3">
-        <div className="rounded-md bg-primary/10 p-2 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+        <div className="rounded-md bg-link/10 p-2 text-link transition-colors group-hover:bg-link group-hover:text-white">
           <LucideIcon className="h-6 w-6" />
         </div>
       </div>
       <div className="space-y-1">
-        <h3 className="text-sm font-medium leading-none text-foreground group-hover:text-primary">
+        <h3 className="text-sm font-medium leading-none text-foreground group-hover:text-link">
           {title}
         </h3>
         {description && (

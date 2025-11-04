@@ -15,6 +15,8 @@ This is a website/blog platform built with Payload CMS and Next.js. It provides 
 - Updated footer to use midnight background instead of generic gray
 - All components now use the new color system via CSS variables
 - Removed unused Geist package dependency
+- Fixed text readability issues by introducing accessible link colors (lagoon teal) for text on light backgrounds
+- Updated all interactive elements (links, buttons, icons) to use the more accessible link color
 - Note: Project uses Lucide React for icons rather than Font Awesome 6 Pro (modern alternative)
 
 **November 3, 2025 - Government Services Portal Transformation**

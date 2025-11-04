@@ -35,7 +35,7 @@ export default function AboutPage() {
         {/* Features */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
-            <div className="p-3 bg-primary/10 text-primary rounded-lg w-fit mb-4">
+            <div className="p-3 bg-link/10 text-link rounded-lg w-fit mb-4">
               <Users className="w-6 h-6" />
             </div>
             <h2 className="text-xl font-semibold mb-3">For Everyone</h2>
@@ -46,7 +46,7 @@ export default function AboutPage() {
           </div>
 
           <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
-            <div className="p-3 bg-primary/10 text-primary rounded-lg w-fit mb-4">
+            <div className="p-3 bg-link/10 text-link rounded-lg w-fit mb-4">
               <Lock className="w-6 h-6" />
             </div>
             <h2 className="text-xl font-semibold mb-3">Secure & Trustworthy</h2>
@@ -57,7 +57,7 @@ export default function AboutPage() {
           </div>
 
           <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
-            <div className="p-3 bg-primary/10 text-primary rounded-lg w-fit mb-4">
+            <div className="p-3 bg-link/10 text-link rounded-lg w-fit mb-4">
               <Zap className="w-6 h-6" />
             </div>
             <h2 className="text-xl font-semibold mb-3">Fast & Efficient</h2>
@@ -68,7 +68,7 @@ export default function AboutPage() {
           </div>
 
           <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg">
-            <div className="p-3 bg-primary/10 text-primary rounded-lg w-fit mb-4">
+            <div className="p-3 bg-link/10 text-link rounded-lg w-fit mb-4">
               <Building2 className="w-6 h-6" />
             </div>
             <h2 className="text-xl font-semibold mb-3">Comprehensive Services</h2>
