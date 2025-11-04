@@ -17,7 +17,7 @@ This is a website/blog platform built with Payload CMS and Next.js. It provides 
 
 **November 3, 2025 - Government Services Portal Transformation**
 - Created new Payload CMS collections: Situations (life/business/authority categories) and Funding Programs
-- Redesigned homepage with government portal blue theme (#0078A0) and hero search section
+- Redesigned homepage with hero search section and category navigation
 - Implemented category buttons for citizens, businesses, and authorities
 - Created situation card grid components with Lucide icons
 - Built dynamic category pages for browsing situations by type
@@ -47,11 +47,13 @@ Preferred communication style: Simple, everyday language.
 - Implements Next.js caching strategies (`unstable_cache`) with tag-based revalidation
 - Supports both static and dynamic rendering based on content
 
-**Styling**: Tailwind CSS with shadcn/ui components
+**Styling**: Tailwind CSS with shadcn/ui components and Komm.ONE design system
 - Custom CSS variables for theming (light/dark mode support)
+- Komm.ONE color palette with midnight teal (#003A40) as primary brand color
 - Component library from shadcn/ui (buttons, inputs, cards, etc.)
 - Responsive design with mobile-first breakpoints
-- Geist font family for typography
+- DM Sans font family for typography
+- Lucide React for icon system
 
 **State Management**: React hooks and context
 - Theme provider for dark/light mode
