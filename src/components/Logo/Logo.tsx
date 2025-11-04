@@ -15,12 +15,9 @@ export const Logo = (props: Props) => {
       <div className="flex items-center justify-center w-8 h-8 bg-midnight rounded">
         <span className="text-white font-bold text-lg">K</span>
       </div>
-      <div className="flex flex-col">
-        <div className="text-midnight dark:text-white text-xl tracking-tight leading-tight">
-          <span className="font-normal">Komm.ONE</span>
-          {' '}
-          <span className="font-bold">Services Portal</span>
-        </div>
+      <div className="flex flex-col leading-tight">
+        <span className="text-midnight dark:text-white font-normal text-base">Komm.ONE</span>
+        <span className="text-midnight dark:text-white font-bold text-base">Services Portal</span>
       </div>
     </div>
   )
