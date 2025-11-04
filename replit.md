@@ -8,11 +8,13 @@ This is a website/blog platform built with Payload CMS and Next.js. It provides 
 
 **November 4, 2025 - Komm.ONE Design System Rebrand**
 - Implemented complete Komm.ONE design system with midnight teal (#003A40) as primary brand color
+- Created custom Komm.ONE logo replacing default Payload branding (midnight square with "K" icon + brand name)
 - Replaced Geist font family with DM Sans for all typography
 - Updated CSS variables with full Komm.ONE color palette (midnight, lagoon, basil, amarillo, alert colors)
 - Extended Tailwind configuration with Komm.ONE brand colors as utility classes
 - Updated footer to use midnight background instead of generic gray
 - All components now use the new color system via CSS variables
+- Removed unused Geist package dependency
 - Note: Project uses Lucide React for icons rather than Font Awesome 6 Pro (modern alternative)
 
 **November 3, 2025 - Government Services Portal Transformation**
