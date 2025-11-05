@@ -1,6 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next/types'
 import { Phone, Mail, MessageCircle, BookOpen, HelpCircle } from 'lucide-react'
+import { CategoryHero } from '@/components/CategoryHero'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Help & Support | Government Services Portal',
@@ -9,12 +11,23 @@ export const metadata: Metadata = {
 
 export default function HelpPage() {
   return (
-    <main className="container py-8">
+    <main>
+      <CategoryHero title="Help & Support" icon="HelpCircle" variant="teal" />
+      
+      <div className="bg-white py-6">
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-link">
+              Home
+            </Link>
+            <span>›</span>
+            <span className="text-foreground">Help & Support</span>
+          </nav>
+        </div>
+      </div>
+
+      <div className="container py-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold mb-3">Help & Support</h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
-          We're here to help you with any questions or issues
-        </p>
 
         {/* Contact Options */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -137,6 +150,7 @@ export default function HelpPage() {
             </li>
           </ul>
         </div>
+      </div>
       </div>
     </main>
   )
