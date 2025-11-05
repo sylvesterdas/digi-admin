@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import * as Icons from 'lucide-react'
+import { Info } from 'lucide-react'
 import { cn } from '@/utilities/ui'
 
 interface SituationCardProps {
@@ -18,23 +19,29 @@ export function SituationCard({ title, icon, href = '#', description }: Situatio
     <Link
       href={href}
       className={cn(
-        'group relative flex flex-col items-start gap-3 rounded-lg border border-border',
-        'bg-card p-6 transition-all duration-200',
-        'hover:border-primary hover:shadow-md hover:scale-[1.02]',
+        'group relative flex flex-col gap-4 rounded-lg',
+        'bg-white border border-gray-200 p-5 transition-all duration-200',
+        'hover:shadow-lg',
       )}
     >
-      <div className="flex items-center gap-3">
-        <div className="rounded-md bg-link/10 p-2 text-link transition-colors group-hover:bg-link group-hover:text-white">
-          <LucideIcon className="h-6 w-6" />
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-3">
+          <div className="rounded-lg bg-link/10 p-2.5 text-link">
+            <LucideIcon className="h-5 w-5" />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-base font-semibold text-midnight leading-tight">
+              {title}
+            </h3>
+          </div>
         </div>
       </div>
-      <div className="space-y-1">
-        <h3 className="text-sm font-medium leading-none text-foreground group-hover:text-link">
-          {title}
-        </h3>
-        {description && (
-          <p className="text-xs text-muted-foreground line-clamp-2">{description}</p>
-        )}
+      {description && (
+        <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
+      )}
+      <div className="mt-auto flex items-center gap-2 text-sm text-link">
+        <Info className="h-4 w-4" />
+        <span>Mehr Info</span>
       </div>
     </Link>
   )

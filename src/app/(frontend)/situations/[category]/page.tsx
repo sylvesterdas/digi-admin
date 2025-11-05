@@ -2,6 +2,7 @@ import React from 'react'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { SituationCard } from '@/components/SituationCard'
+import { CategoryHero } from '@/components/CategoryHero'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -9,14 +10,20 @@ const categoryInfo = {
   life: {
     title: 'Life situations',
     description: 'Find services and information for various life situations',
+    icon: 'Users',
+    variant: 'teal' as const,
   },
   business: {
     title: 'Business situations',
     description: 'Services and procedures for businesses and entrepreneurs',
+    icon: 'Briefcase',
+    variant: 'green' as const,
   },
   authority: {
     title: 'Administrative situations',
     description: 'Information and services for public authorities',
+    icon: 'Building2',
+    variant: 'lime' as const,
   },
 }
 
@@ -48,17 +55,17 @@ export default async function SituationsPage({
 
   return (
     <main className="min-h-screen bg-white">
-      <div className="bg-gradient-to-b from-primary/5 to-transparent py-8">
+      <CategoryHero title={info.title} icon={info.icon} variant={info.variant} />
+      
+      <div className="bg-white py-6">
         <div className="container mx-auto px-4">
-          <nav className="mb-4 flex items-center gap-2 text-sm text-muted-foreground">
-            <Link href="/" className="hover:text-primary">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-link">
               Home
             </Link>
             <span>›</span>
             <span className="text-foreground">{info.title}</span>
           </nav>
-          <h1 className="mb-2 text-3xl font-bold text-foreground md:text-4xl">{info.title}</h1>
-          <p className="text-muted-foreground">{info.description}</p>
         </div>
       </div>
 

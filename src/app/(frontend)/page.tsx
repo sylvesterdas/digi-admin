@@ -3,6 +3,7 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { SituationCard } from '@/components/SituationCard'
 import { HeroSearch } from '@/components/HeroSearch'
+import { GeometricShapes } from '@/components/GeometricShapes'
 import Link from 'next/link'
 
 export default async function HomePage() {
@@ -21,8 +22,9 @@ export default async function HomePage() {
 
   return (
     <main className="flex flex-col">
-      <section className="bg-primary py-16 text-primary-foreground">
-        <div className="container mx-auto px-4">
+      <section className="relative overflow-hidden bg-primary py-16 text-primary-foreground">
+        <GeometricShapes variant="teal" className="opacity-20" />
+        <div className="container relative z-10 mx-auto px-4">
           <div className="flex flex-col items-center gap-6 text-center">
             <h1 className="text-4xl font-bold md:text-5xl">
               Government Services Portal
