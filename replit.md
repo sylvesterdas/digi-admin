@@ -6,6 +6,14 @@ This is a website/blog platform built with Payload CMS and Next.js. It provides 
 
 # Recent Changes
 
+**November 5, 2025 - Komm.ONE Design System Enhancement**
+- Implemented geometric background decorations with layered angular/triangular shapes (GeometricShapes component)
+- Added category-specific color system: teal (#00B2A9), green (#00A651), lime (#A4D233), orange (#FF9E1B)
+- Created CategoryHero component with circular icons, "Komm.ONE" branding, and geometric backgrounds
+- Updated SituationCard component to match Komm.ONE application tile design with "Mehr Info" links
+- Integrated geometric shapes into homepage hero section
+- All design elements match official Komm.ONE style guide and design examples
+
 **November 4, 2025 - Komm.ONE Design System Rebrand**
 - Implemented complete Komm.ONE design system with midnight teal (#003A40) as primary brand color
 - Created custom Komm.ONE logo following brand guidelines: K icon + "Komm.ONE" (regular) + "Services Portal" (bold)
