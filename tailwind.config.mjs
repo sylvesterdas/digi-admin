@@ -122,6 +122,24 @@ const config = {
           highlight: 'var(--amarillo-highlight)',
           dark: 'var(--amarillo-dark)',
         },
+        category: {
+          teal: {
+            DEFAULT: 'var(--category-teal)',
+            light: 'var(--category-teal-light)',
+          },
+          green: {
+            DEFAULT: 'var(--category-green)',
+            light: 'var(--category-green-light)',
+          },
+          lime: {
+            DEFAULT: 'var(--category-lime)',
+            light: 'var(--category-lime-light)',
+          },
+          orange: {
+            DEFAULT: 'var(--category-orange)',
+            light: 'var(--category-orange-light)',
+          },
+        },
       },
       fontFamily: {
         sans: ['var(--font-dm-sans)', 'sans-serif'],
