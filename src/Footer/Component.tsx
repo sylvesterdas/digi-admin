@@ -11,7 +11,7 @@ export async function Footer() {
           {/* About Section */}
           <div>
             <div className="mb-4">
-              <Logo className="[&>div:first-child]:bg-white [&>div:first-child>span]:text-midnight" />
+              <Logo className="[&>div:first-child]:bg-white [&>div:first-child>span]:text-midnight [&>div:last-child>span]:text-white" />
             </div>
             <p className="text-white/70 text-sm">
               Your central platform for accessing government services, procedures, and information.
