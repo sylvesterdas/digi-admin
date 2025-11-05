@@ -1,6 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next/types'
 import { Building2, Users, Lock, Zap } from 'lucide-react'
+import { CategoryHero } from '@/components/CategoryHero'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About | Government Services Portal',
@@ -9,18 +11,20 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="py-8">
-      {/* Hero Section */}
-      <section className="bg-primary text-white py-16 mb-12">
-        <div className="container">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold mb-4">About Us</h1>
-            <p className="text-xl text-white/90">
-              Your central access point to digital government services
-            </p>
-          </div>
+    <main>
+      <CategoryHero title="About Us" icon="Info" variant="orange" />
+      
+      <div className="bg-white py-6">
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-link">
+              Home
+            </Link>
+            <span>›</span>
+            <span className="text-foreground">About Us</span>
+          </nav>
         </div>
-      </section>
+      </div>
 
       <div className="container max-w-6xl">
         {/* Introduction */}

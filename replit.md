@@ -13,6 +13,7 @@ This is a website/blog platform built with Payload CMS and Next.js. It provides 
 - Added abbreviation field to Situations collection for storing two-letter codes (BM, FT, KV, etc.)
 - Implemented oversized geometric shapes (280x280 SVG) with negative positioning to bleed beyond card boundaries
 - Removed overflow-hidden constraints to allow shapes to extend dramatically as shown in reference designs
+- Applied CategoryHero component to all major pages: About (orange), Help (teal), Funding (green), and situation category pages
 - All components now pixel-perfectly match official Komm.ONE design examples (apps-1.png, produktgruppe.png, styleguide.png)
 - Architect-verified: Implementation aligns with reference designs with no critical discrepancies
 

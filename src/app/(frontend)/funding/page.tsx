@@ -2,6 +2,7 @@ import React from 'react'
 import { Metadata } from 'next/types'
 import { DollarSign, Users, Building2, Lightbulb } from 'lucide-react'
 import Link from 'next/link'
+import { CategoryHero } from '@/components/CategoryHero'
 
 export const metadata: Metadata = {
   title: 'Funding Programs | Government Services Portal',
@@ -41,19 +42,20 @@ const fundingCategories = [
 
 export default function FundingPage() {
   return (
-    <main className="py-8">
-      {/* Hero Section */}
-      <section className="bg-primary text-white py-12 mb-8">
-        <div className="container">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold mb-4">Funding Programs</h1>
-            <p className="text-lg text-white/90">
-              Discover funding opportunities for your business, projects, and initiatives.
-              Navigate through our categories to find the right support for your needs.
-            </p>
-          </div>
+    <main>
+      <CategoryHero title="Funding Programs" icon="Wallet" variant="green" />
+      
+      <div className="bg-white py-6">
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-link">
+              Home
+            </Link>
+            <span>›</span>
+            <span className="text-foreground">Funding Programs</span>
+          </nav>
         </div>
-      </section>
+      </div>
 
       <div className="container">
         {/* Funding Navigation Wizard */}
