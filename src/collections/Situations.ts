@@ -22,6 +22,15 @@ export const Situations: CollectionConfig = {
       required: true,
     },
     {
+      name: 'abbreviation',
+      type: 'text',
+      required: false,
+      maxLength: 3,
+      admin: {
+        description: 'Two-letter abbreviation for card display (e.g., BM, FT, KV)',
+      },
+    },
+    {
       name: 'description',
       type: 'textarea',
     },

@@ -1,48 +1,65 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
-import * as Icons from 'lucide-react'
-import { Info } from 'lucide-react'
+import { Info, Bookmark } from 'lucide-react'
 import { cn } from '@/utilities/ui'
 
 interface SituationCardProps {
   title: string
-  icon: string
+  abbreviation: string
+  category?: 'life' | 'business' | 'authority'
   href?: string
   description?: string
 }
 
-export function SituationCard({ title, icon, href = '#', description }: SituationCardProps) {
-  const LucideIcon = (Icons as any)[icon] || Icons.FileText
+const categoryColors = {
+  life: 'bg-category-teal text-white',
+  business: 'bg-category-green text-white',
+  authority: 'bg-category-lime text-midnight',
+}
+
+export function SituationCard({ 
+  title, 
+  abbreviation, 
+  category = 'life',
+  href = '#', 
+}: SituationCardProps) {
+  const [isBookmarked, setIsBookmarked] = useState(false)
 
   return (
-    <Link
-      href={href}
-      className={cn(
-        'group relative flex flex-col gap-4 rounded-lg',
-        'bg-white border border-gray-200 p-5 transition-all duration-200',
-        'hover:shadow-lg',
-      )}
-    >
-      <div className="flex items-start justify-between">
-        <div className="flex items-center gap-3">
-          <div className="rounded-lg bg-link/10 p-2.5 text-link">
-            <LucideIcon className="h-5 w-5" />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-base font-semibold text-midnight leading-tight">
-              {title}
-            </h3>
-          </div>
+    <div className="group relative flex flex-col rounded-lg bg-white border border-gray-200 hover:shadow-md transition-shadow duration-200">
+      <button
+        onClick={(e) => {
+          e.preventDefault()
+          setIsBookmarked(!isBookmarked)
+        }}
+        className={cn(
+          'absolute top-4 right-4 p-1.5 rounded transition-colors',
+          isBookmarked ? 'text-midnight' : 'text-gray-400 hover:text-gray-600'
+        )}
+        aria-label={isBookmarked ? 'Remove bookmark' : 'Add bookmark'}
+      >
+        <Bookmark className={cn('h-5 w-5', isBookmarked && 'fill-current')} />
+      </button>
+
+      <Link href={href} className="flex flex-col p-6 flex-1">
+        <div className={cn(
+          'inline-flex items-center justify-center w-16 h-16 rounded font-bold text-xl mb-4',
+          categoryColors[category]
+        )}>
+          {abbreviation}
         </div>
-      </div>
-      {description && (
-        <p className="text-sm text-gray-600 line-clamp-2">{description}</p>
-      )}
-      <div className="mt-auto flex items-center gap-2 text-sm text-link">
-        <Info className="h-4 w-4" />
-        <span>Mehr Info</span>
-      </div>
-    </Link>
+
+        <h3 className="text-base font-semibold text-midnight mb-auto">
+          {title}
+        </h3>
+
+        <div className="mt-6 flex items-center gap-2 text-sm text-link font-medium">
+          <Info className="h-4 w-4" />
+          <span>Mehr Info</span>
+        </div>
+      </Link>
+    </div>
   )
 }

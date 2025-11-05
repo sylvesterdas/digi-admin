@@ -756,6 +756,10 @@ export interface Form {
 export interface Situation {
   id: number;
   title: string;
+  /**
+   * Two-letter abbreviation for card display (e.g., BM, FT, KV)
+   */
+  abbreviation?: string | null;
   description?: string | null;
   /**
    * Lucide icon name (e.g., Baby, Briefcase, Building2)
@@ -1408,6 +1412,7 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface SituationsSelect<T extends boolean = true> {
   title?: T;
+  abbreviation?: T;
   description?: T;
   icon?: T;
   category?: T;
