@@ -109,7 +109,7 @@ export const NavigationMenu: React.FC = () => {
       <button
         ref={menuButtonRef}
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 text-midnight dark:text-white hover:bg-link/10 rounded-lg transition-colors"
+        className="flex items-center gap-2 px-4 py-2 text-midnight hover:bg-link/10 rounded-lg transition-colors"
         aria-label="Open menu"
         aria-expanded={isOpen}
         aria-controls="navigation-drawer"
@@ -134,16 +134,16 @@ export const NavigationMenu: React.FC = () => {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
-          className="fixed top-0 left-0 h-full w-80 bg-white dark:bg-gray-900 z-50 shadow-2xl transform transition-transform duration-300 ease-in-out translate-x-0"
+          className="fixed top-0 left-0 h-full w-80 bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-in-out translate-x-0"
         >
           <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Navigation</h2>
+          <div className="flex items-center justify-between p-4 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900">Navigation</h2>
             <button
               ref={closeButtonRef}
               onClick={() => setIsOpen(false)}
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
               aria-label="Close menu"
             >
               <X className="w-5 h-5" />
@@ -156,7 +156,7 @@ export const NavigationMenu: React.FC = () => {
             <Link
               href="/"
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors border-b border-gray-100 dark:border-gray-800"
+              className="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors border-b border-gray-100"
             >
               <Home className="w-5 h-5 text-link" />
               <span className="font-medium">Home</span>
@@ -164,11 +164,11 @@ export const NavigationMenu: React.FC = () => {
 
             {/* Menu Sections */}
             {menuSections.map((section, idx) => (
-              <div key={idx} className="border-b border-gray-100 dark:border-gray-800">
-                <div className="px-4 py-3 bg-gray-50 dark:bg-gray-800/50">
+              <div key={idx} className="border-b border-gray-100">
+                <div className="px-4 py-3 bg-gray-50">
                   <div className="flex items-center gap-3">
                     <span className="text-link">{section.icon}</span>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-gray-900">
                       {section.title}
                     </h3>
                   </div>
@@ -179,9 +179,9 @@ export const NavigationMenu: React.FC = () => {
                       <Link
                         href={item.href}
                         onClick={() => setIsOpen(false)}
-                        className="flex items-center justify-between px-4 py-3 pl-12 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors group"
+                        className="flex items-center justify-between px-4 py-3 pl-12 hover:bg-gray-50 transition-colors group"
                       >
-                        <span className="text-gray-700 dark:text-gray-300">{item.label}</span>
+                        <span className="text-gray-700">{item.label}</span>
                         <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-link transition-colors" />
                       </Link>
                     </li>
@@ -192,8 +192,8 @@ export const NavigationMenu: React.FC = () => {
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-            <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+          <div className="p-4 border-t border-gray-200 bg-gray-50">
+            <div className="flex items-center gap-2 text-sm text-gray-600">
               <Phone className="w-4 h-4" />
               <span>Hotline: 089 / 1234-5678</span>
             </div>

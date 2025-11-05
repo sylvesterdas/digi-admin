@@ -6,6 +6,14 @@ This is a website/blog platform built with Payload CMS and Next.js. It provides 
 
 # Recent Changes
 
+**November 5, 2025 - Dark Mode Disabled**
+- Disabled Tailwind dark mode support (set to `false` in tailwind.config.mjs)
+- Removed all `dark:` class variants from components to prevent dark mode activation
+- Updated Logo, NavigationMenu, and RichText components to remove dark mode styling
+- Footer logo text now explicitly set to white for visibility on midnight background
+- Fixed local development environment styling inconsistencies caused by system dark mode preferences
+- Application now displays consistently with Komm.ONE design system colors across all environments
+
 **November 5, 2025 - Komm.ONE Design System Enhancement (Final)**
 - Redesigned SituationCard component with two-letter abbreviations in colored squares, bookmark icons, and "Mehr Info" links matching reference design
 - Rebuilt homepage with large category cards featuring Komm.ONE branding, oversized icons, and dramatic geometric shapes extending beyond card edges
@@ -65,7 +73,7 @@ Preferred communication style: Simple, everyday language.
 - Supports both static and dynamic rendering based on content
 
 **Styling**: Tailwind CSS with shadcn/ui components and Komm.ONE design system
-- Custom CSS variables for theming (light/dark mode support)
+- Custom CSS variables for theming (dark mode disabled for consistent branding)
 - Komm.ONE color palette with midnight teal (#003A40) as primary brand color
 - Component library from shadcn/ui (buttons, inputs, cards, etc.)
 - Responsive design with mobile-first breakpoints

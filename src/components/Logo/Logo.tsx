@@ -16,8 +16,8 @@ export const Logo = (props: Props) => {
         <span className="text-white font-bold text-sm">K</span>
       </div>
       <div className="flex flex-col gap-0 leading-none">
-        <span className="text-midnight dark:text-white font-normal text-base leading-tight">Komm.ONE</span>
-        <span className="text-midnight dark:text-white font-bold text-base leading-tight">Services Portal</span>
+        <span className="text-midnight font-normal text-base leading-tight">Komm.ONE</span>
+        <span className="text-midnight font-bold text-base leading-tight">Services Portal</span>
       </div>
     </div>
   )
