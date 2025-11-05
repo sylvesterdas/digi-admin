@@ -89,6 +89,16 @@
     
     --link: 177 100% 35%;
     --link-hover: 177 100% 26%;
+    
+    /* Category Colors */
+    --category-teal: #00B2A9;
+    --category-teal-light: #D7F7F5;
+    --category-green: #00A651;
+    --category-green-light: #E6F7EE;
+    --category-lime: #A4D233;
+    --category-lime-light: #F2F8E6;
+    --category-orange: #FF9E1B;
+    --category-orange-light: #FFF4E6;
   }
 
   [data-theme='dark'] {
