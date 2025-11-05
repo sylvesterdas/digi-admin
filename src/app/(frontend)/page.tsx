@@ -68,13 +68,16 @@ export default async function HomePage() {
                   className="group relative transition-shadow hover:shadow-lg"
                 >
                   <div className={`relative ${card.bgColor} p-6 h-48 flex flex-col rounded-lg`}>
-                    <div className="relative z-10 pb-20">
-                      <div className="mb-2 text-xs font-normal text-midnight">Komm.ONE</div>
-                      <h2 className="mb-1 text-lg font-bold text-midnight">{card.title}</h2>
-                      <p className="text-sm text-midnight/70">{card.subtitle}</p>
+                    <div className="relative z-10 flex items-start gap-3 mb-4">
+                      <div className="flex-shrink-0 mt-1">
+                        <Icon className="h-12 w-12 text-midnight" strokeWidth={1.5} />
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-xs font-normal text-midnight mb-1">Komm.ONE</div>
+                        <h2 className="text-lg font-bold text-midnight leading-tight">{card.title}</h2>
+                      </div>
                     </div>
-                    
-                    <Icon className="absolute bottom-4 left-6 h-16 w-16 text-midnight/12 z-0" strokeWidth={1} />
+                    <p className="relative z-10 text-sm text-midnight/70">{card.subtitle}</p>
                     
                     <svg 
                       className="absolute -right-12 -bottom-12 pointer-events-none" 
