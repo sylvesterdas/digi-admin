@@ -76,7 +76,8 @@ export default async function SituationsPage({
               <SituationCard
                 key={situation.id}
                 title={situation.title}
-                icon={situation.icon}
+                abbreviation={situation.abbreviation || situation.title.substring(0, 2).toUpperCase()}
+                category={situation.category as 'life' | 'business' | 'authority'}
                 description={situation.description || ''}
                 href={`/situations/${situation.slug}`}
               />
