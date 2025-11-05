@@ -1,11 +1,9 @@
 import React from 'react'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
-import { CategoryCard } from '@/components/CategoryCard/CategoryCard'
-import { AppCard } from '@/components/AppCard/AppCard'
+import { SituationCard } from '@/components/SituationCard'
 import { HeroSearch } from '@/components/HeroSearch'
 import Link from 'next/link'
-import { Building2, Coins, GraduationCap, UserCheck } from 'lucide-react'
 
 export default async function HomePage() {
   const payload = await getPayload({ config })
@@ -54,68 +52,43 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Category Cards Section */}
-      <section className="bg-gray-50 py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <CategoryCard
-              title="Bauen & Umwelt"
-              description="Alle Apps von Abfallüberwachung bis Geoinformation."
-              icon={<Building2 className="w-8 h-8" />}
-              href="/situations/life"
-              color="teal"
-            />
-            <CategoryCard
-              title="Finanzen & Personal"
-              description="Alle Apps für Ihre Ausgaben im Finanz- und Personalwesen."
-              icon={<Coins className="w-8 h-8" />}
-              href="/situations/business"
-              color="green"
-            />
-            <CategoryCard
-              title="Bildung & Soziales"
-              description="Alle Apps von Bibliothek bis Wohlergehen."
-              icon={<GraduationCap className="w-8 h-8" />}
-              href="/funding"
-              color="lime"
-            />
-            <CategoryCard
-              title="Bürgerservice"
-              description="Apps für die Bereiche Einwohnerwesen, Ordnungs- und Gewerberecht."
-              icon={<UserCheck className="w-8 h-8" />}
-              href="/services/popular"
-              color="orange"
-            />
-          </div>
-        </div>
-      </section>
-
       <section className="bg-white py-12">
         <div className="container mx-auto px-4">
           <div className="mb-8 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-foreground">Verfügbare Apps</h2>
+            <h2 className="text-2xl font-bold text-foreground">Life situations</h2>
             <Link
               href="/situations/life"
               className="text-sm font-medium text-link hover:text-link-hover hover:underline"
-              >
-              Alle hinzufügen →
+            >
+              Show all life situations →
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <AppCard title="Bauflächenmanagement-Führungskomponente" abbreviation="BM" href="/app/bm" color="teal" />
-            <AppCard title="Flächenmanagement" abbreviation="FT" href="/app/ft" color="teal" />
-            <AppCard title="KM-Finanzen" abbreviation="FN" href="/app/fn" color="green" bookmarked />
-            <AppCard title="KM-Finanzen AWM" abbreviation="FN" href="/app/fn-awm" color="green" />
-            <AppCard title="KM-Personal" abbreviation="PN" href="/app/pn" color="blue" bookmarked />
-            <AppCard title="Gesundheitsmanagement" abbreviation="GM" href="/app/gm" color="lime" />
-            <AppCard title="Kita_Verwaltung" abbreviation="KV" href="/app/kv" color="lime" />
-            <AppCard title="Sozialhilfe" abbreviation="SH" href="/app/sh" color="lime" />
-            <AppCard title="KM-Fahrzeug" abbreviation="FZ" href="/app/fz" color="orange" />
-            <AppCard title="KM-Gewerberegister" abbreviation="GR" href="/app/gr" color="orange" />
-            <AppCard title="KM-Gewerberegister Cadenza" abbreviation="GC" href="/app/gc" color="orange" />
-            <AppCard title="KM-Gewerberegister Testumgebung" abbreviation="GT" href="/app/gt" color="orange" />
-          </div>
+          {lifeSituations.docs.length > 0 ? (
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+              {lifeSituations.docs.map((situation) => (
+                <SituationCard
+                  key={situation.id}
+                  title={situation.title}
+                  icon={situation.icon}
+                  description={situation.description || ''}
+                  href={`/situations/${situation.slug}`}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-lg border border-border bg-muted/30 p-8 text-center">
+              <p className="text-muted-foreground">
+                No situations available yet. Please add some through the admin panel.
+              </p>
+              <Link
+                href="/admin"
+                className="mt-4 inline-block rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Go to Admin Panel
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 
