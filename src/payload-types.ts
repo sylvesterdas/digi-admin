@@ -761,6 +761,21 @@ export interface Situation {
    */
   abbreviation?: string | null;
   description?: string | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   /**
    * Lucide icon name (e.g., Baby, Briefcase, Building2)
    */
@@ -1414,6 +1429,7 @@ export interface SituationsSelect<T extends boolean = true> {
   title?: T;
   abbreviation?: T;
   description?: T;
+  content?: T;
   icon?: T;
   category?: T;
   order?: T;
