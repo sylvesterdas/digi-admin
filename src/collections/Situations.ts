@@ -2,6 +2,14 @@ import type { CollectionConfig } from 'payload'
 import { authenticated } from '../access/authenticated'
 import { anyone } from '../access/anyone'
 import { slugField } from 'payload'
+import {
+  BlocksFeature,
+  FixedToolbarFeature,
+  HeadingFeature,
+  HorizontalRuleFeature,
+  InlineToolbarFeature,
+  lexicalEditor,
+} from '@payloadcms/richtext-lexical'
 
 export const Situations: CollectionConfig = {
   slug: 'situations',
@@ -33,6 +41,24 @@ export const Situations: CollectionConfig = {
     {
       name: 'description',
       type: 'textarea',
+    },
+    {
+      name: 'content',
+      type: 'richText',
+      editor: lexicalEditor({
+        features: ({ rootFeatures }) => {
+          return [
+            ...rootFeatures,
+            HeadingFeature({ enabledHeadingSizes: ['h1', 'h2', 'h3', 'h4'] }),
+            BlocksFeature({ blocks: [] }),
+            FixedToolbarFeature(),
+            InlineToolbarFeature(),
+            HorizontalRuleFeature(),
+          ]
+        },
+      }),
+      label: 'Content',
+      required: false,
     },
     {
       name: 'icon',
